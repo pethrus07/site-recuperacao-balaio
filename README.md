@@ -87,3 +87,21 @@ Um ataque havia comprometido a integridade do site, exigindo ações rápidas de
 
 ## 📂 Organização do Repositório
 
+---
+
+## ✍️ Considerações Finais
+
+Este repositório documenta uma experiência prática de **resposta a incidentes de segurança em ambiente WordPress**. Demonstra habilidades em:
+
+- Diagnóstico técnico
+- Manipulação segura de arquivos PHP
+- Boas práticas em cibersegurança
+- Comunicação clara com o cliente
+- Autonomia e responsabilidade em situações reais
+
+---
+
+🔗 **Para mais projetos ou contato profissional**:  
+[GitHub](https://github.com/seuusuario) • [LinkedIn](https://linkedin.com/in/seunome) • [Portfólio](https://seusite.com)
+
+
