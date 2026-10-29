@@ -1,28 +1,31 @@
 # Arquitetura
 
-Diagramas gerados a partir do Sinapse (o segundo cérebro do Pedro). Cada projeto tem três vistas,
-cada uma numa notação padrão:
+Três vistas do sistema, cada uma numa notação padrão.
 
-1. **Quem usa e para quê**: UML, diagrama de casos de uso.
-2. **O processo principal**: BPMN 2.0, com raias por quem executa.
-3. **A arquitetura**: modelo C4, nível 2 (containers).
+| Vista | Notação | Responde |
+|---|---|---|
+| 1. Casos de uso | UML | Quem usa e para quê |
+| 2. Processo | BPMN 2.0 | Como o trabalho anda, com uma raia para cada quem executa |
+| 3. Arquitetura | C4, nível 2 | De que partes o sistema é feito e com quem conversa |
 
 ## Recuperação Balaio Nordeste · site WordPress hackeado
 
 Relatório do serviço de março/2025 para a Associação Cultural Balaio Nordeste: diagnóstico, limpeza e blindagem de um site WordPress invadido, com backdoor injetado no tema. Documentação de resposta a incidente, não código.
 
-### Quem usa e para quê (UML)
+### 1. Quem usa e para quê
 
-![Casos de uso · Recuperação Balaio Nordeste · site WordPress hackeado](./site-recuperacao-balaio-1-casos-de-uso.svg)
+![Casos de uso de Recuperação Balaio Nordeste](./recuperacao-balaio-nordeste-1-casos-de-uso.svg)
 
-### Do site atacado ao site limpo e documentado (BPMN 2.0)
+### 2. Do site atacado ao site limpo e documentado
 
-![Processo · Recuperação Balaio Nordeste · site WordPress hackeado](./site-recuperacao-balaio-2-processo.svg)
+![Processo de Recuperação Balaio Nordeste](./recuperacao-balaio-nordeste-2-processo.svg)
 
-### Arquitetura (C4, containers)
+### 3. Arquitetura
 
-![Arquitetura · Recuperação Balaio Nordeste · site WordPress hackeado](./site-recuperacao-balaio-3-arquitetura.svg)
+![Arquitetura de Recuperação Balaio Nordeste](./recuperacao-balaio-nordeste-3-arquitetura.svg)
 
-Editável: [`site-recuperacao-balaio.excalidraw`](./site-recuperacao-balaio.excalidraw), abre em [excalidraw.com](https://excalidraw.com) ou no VS Code com a extensão Excalidraw.
+Para editar: [recuperacao-balaio-nordeste.excalidraw](./recuperacao-balaio-nordeste.excalidraw), que abre em [excalidraw.com](https://excalidraw.com) ou na extensão Excalidraw do VS Code.
 
-A fonte destes arquivos é o vault do Sinapse (`09-DESENHOS/`); alterações feitas aqui são sobrescritas na próxima publicação.
+## De onde vêm
+
+Os diagramas são gerados a partir do Sinapse, o vault onde o Pedro organiza notas e projetos. Mudança feita direto aqui some na próxima publicação: o lugar de mudar é a especificação no Sinapse.
