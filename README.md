@@ -1,107 +1,31 @@
-# 🔒 Recuperação de Site WordPress Hackeado - Balaio Nordeste
+[Português](README.pt-BR.md) | English
 
-📅 **Data**: 15/03/2025  
-👤 **Responsável**: Pedro Michael Bezerra de Oliveira  
-🏛️ **Cliente**: Associação Cultural Balaio Nordeste  
-🌐 **Site Afetado**: [balaionordeste.org](http://balaionordeste.org)
+# Hacked WordPress site recovery
 
----
+> **Archived (2026-11).** One-off deliverable from March 2025. There is no code here, only the record of the service.
 
-## 🧠 Contexto
+## What it was
 
-O site da Associação Cultural Balaio Nordeste foi meu objeto de estudo e aplicação prática durante o Trabalho de Conclusão de Curso em Informática (jun-dez/2024), no qual atuei na manutenção e atualização do site institucional.
+The WordPress site of a cultural association started loading slowly, showing content nobody had published and redirecting visitors to suspicious pages. I knew the site well because I had maintained it during my final course project in 2024, and the association called me back.
 
-Em março de 2025, fui novamente acionado pela instituição após a identificação de um possível ataque ao site. Este relatório descreve o processo completo de análise, recuperação e prevenção de futuras vulnerabilidades.
+What was done:
 
----
+1. **Diagnosis in the admin panel.** Suspicious user accounts reviewed, themes and plugins listed, WordPress, plugins and themes updated.
+2. **File inspection over FTP.** Permissions checked and `wp-content` and `wp-includes` reviewed by hand.
+3. **Finding the malicious code.** An online scanner (Sucuri SiteCheck) plus manual reading of PHP files looking for `eval`, `base64_decode`, `str_rot13` and `preg_replace` with `/e`. A script injected in the theme's `header.php` was found, probably a backdoor through an outdated plugin.
+4. **Cleanup.** Malicious code removed, core files restored from clean copies, recently modified files reviewed, database (posts and options) checked for hidden payloads.
 
-## ❗ Descrição do Problema
+Result: site restored, content and navigation clean, and recommendations left with the association (keep everything updated, trusted plugins only, automatic backups, two-factor login, monitoring).
 
-O site apresentava:
-- Comportamentos anormais no carregamento.
-- Exibição de conteúdo não autorizado.
-- Lentidão e redirecionamentos suspeitos.
+This repository also absorbs a second, shorter record of the same job (`Balaio-unphising`), which held only a one-line note.
 
-Um ataque havia comprometido a integridade do site, exigindo ações rápidas de correção e blindagem.
+## What I learned
 
----
+- **Read the code, not only the scanner.** The scanner pointed at the site; the injected script was confirmed by reading the PHP files by hand.
+- **Clean files are not enough.** Payloads also hide in the database, in posts and in `wp_options`.
+- **The entry point matters more than the cleanup.** Without updating the outdated plugin the same attack would come back.
+- **Prevention is cheaper.** Updates, backups and two-factor login would have avoided most of the work.
 
-## 🔧 Etapas Realizadas
+## License
 
-### 1. Diagnóstico e Acesso ao WordPress
-- Acesso via painel administrativo com credenciais seguras.
-- Análise de contas de usuário suspeitas.
-- Verificação de temas e plugins instalados.
-- Atualização para as versões mais recentes do CMS, plugins e temas.
-
-### 2. Inspeção via FTP
-- Conexão segura com FileZilla.
-- Análise de permissões de arquivos/pastas.
-- Varredura manual das principais estruturas do site (wp-content, wp-includes).
-
-### 3. Identificação de Códigos Maliciosos
-- Uso de ferramentas online para análise de malware.
-- Detecção de script injetado no `header.php`, com comportamento malicioso (provável backdoor via plugin desatualizado).
-- Análise de arquivos `.php`, com base na estrutura do WordPress, para identificar funções obscuras, eval(), base64_decode() e outras práticas comuns em malwares.
-
-### 4. Limpeza e Correção
-- Remoção do código malicioso.
-- Restauração de arquivos principais a partir de versões limpas.
-- Revisão manual de todos os arquivos modificados recentemente.
-- Verificação de banco de dados (posts e options) para rastrear payloads ocultos.
-
----
-
-## ✅ Resultados Obtidos
-
-✔️ Site restaurado com sucesso.  
-✔️ Navegação e conteúdo seguros.  
-✔️ Arquivos e banco de dados limpos.  
-✔️ Medidas de segurança aplicadas para mitigar novos ataques.
-
----
-
-## 🧰 Tecnologias e Ferramentas Utilizadas
-
-| Área | Ferramentas / Tecnologias |
-|------|----------------------------|
-| CMS  | WordPress |
-| FTP  | FileZilla |
-| Segurança | Scanner de malware (Sucuri SiteCheck), análise manual |
-| Linguagens | PHP, HTML, JavaScript |
-| Análise de Código | Identificação de funções maliciosas (`eval`, `base64_decode`, `str_rot13`, `preg_replace` com /e) |
-| Banco de Dados | MySQL (via painel do provedor) |
-| Sistema de Arquivos | Navegação por diretórios e permissões Linux-style |
-
----
-
-## 🔐 Boas Práticas e Recomendações
-
-- ✅ Atualizar sempre o WordPress e seus componentes.
-- ✅ Utilizar plugins e temas verificados e confiáveis.
-- ✅ Manter backups automáticos e frequentes.
-- ✅ Utilizar autenticação em duas etapas (2FA).
-- ✅ Monitorar o site com ferramentas de segurança e logs.
-
----
-
-## 📂 Organização do Repositório
-
----
-
-## ✍️ Considerações Finais
-
-Este repositório documenta uma experiência prática de **resposta a incidentes de segurança em ambiente WordPress**. Demonstra habilidades em:
-
-- Diagnóstico técnico
-- Manipulação segura de arquivos PHP
-- Boas práticas em cibersegurança
-- Comunicação clara com o cliente
-- Autonomia e responsabilidade em situações reais
-
----
-
-🔗 **Para mais projetos ou contato profissional**:  
-[GitHub](https://github.com/seuusuario) • [LinkedIn](https://linkedin.com/in/seunome) • [Portfólio](https://seusite.com)
-
-
+All rights reserved.
