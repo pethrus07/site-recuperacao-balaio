@@ -28,4 +28,4 @@ This repository also absorbs a second, shorter record of the same job (`Balaio-u
 
 ## License
 
-All rights reserved.
+All rights reserved. Published as portfolio; not licensed for reuse. See [LICENSE](LICENSE).

@@ -28,4 +28,4 @@ Este repositório também absorve um segundo registro, mais curto, do mesmo serv
 
 ## Licença
 
-Todos os direitos reservados.
+Todos os direitos reservados. Publicado como portfólio; não licenciado para reuso. Veja o arquivo [LICENSE](LICENSE).
