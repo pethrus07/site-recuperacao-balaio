@@ -1,10 +1,12 @@
-[Português](README.pt-BR.md) | English
+# Recuperação de site WordPress invadido
 
-# Hacked WordPress site recovery
+English · [Português](README.pt-BR.md)
 
-> **Archived (2026-11).** One-off deliverable from March 2025. There is no code here, only the record of the service.
+## Status
 
-## What it was
+Archived (2026-11). One-off deliverable from March 2025. There is no code here, only the record of the service.
+
+## What it does
 
 The WordPress site of a cultural association started loading slowly, showing content nobody had published and redirecting visitors to suspicious pages. I knew the site well because I had maintained it during my final course project in 2024, and the association called me back.
 
@@ -19,7 +21,7 @@ Result: site restored, content and navigation clean, and recommendations left wi
 
 This repository also absorbs a second, shorter record of the same job (`Balaio-unphising`), which held only a one-line note.
 
-## What I learned
+## What was learned
 
 - **Read the code, not only the scanner.** The scanner pointed at the site; the injected script was confirmed by reading the PHP files by hand.
 - **Clean files are not enough.** Payloads also hide in the database, in posts and in `wp_options`.

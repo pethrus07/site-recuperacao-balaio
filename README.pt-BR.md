@@ -1,10 +1,12 @@
-Português | [English](README.md)
-
 # Recuperação de site WordPress invadido
 
-> **Arquivado (2026-11).** Entrega pontual de março de 2025. Não há código aqui, só o registro do serviço.
+[English](README.md) · Português
 
-## O que foi
+## Status
+
+Arquivado (2026-11). Entrega pontual de março de 2025. Não há código aqui, só o registro do serviço.
+
+## O que faz
 
 O site WordPress de uma associação cultural passou a carregar devagar, a mostrar conteúdo que ninguém tinha publicado e a redirecionar visitantes para páginas suspeitas. Eu conhecia bem o site porque tinha cuidado dele no meu trabalho de conclusão de curso, em 2024, e a associação me chamou de volta.
 
